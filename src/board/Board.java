@@ -28,11 +28,17 @@ public class Board {
     this.columns = columns;
   }
 
-  public Piece getPieceByBoardPosition(int row, int column) {
+  public Piece piece(int row, int column) {
     return pieces[row][column];
   }
 
-  public Piece getPieceByBoardPosition(Position position) {
+  public Piece piece(Position position) {
     return pieces[position.getRow()][position.getColumn()];
+  }
+
+  public void placePiece(Piece piece, Position position) {
+    // already be instantiade in constructor
+    this.pieces[position.getRow()][position.getColumn()] = piece;
+    piece.position = position;
   }
 }

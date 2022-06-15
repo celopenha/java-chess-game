@@ -12,9 +12,10 @@ public class Main {
 
 		ChessMatch chessMatch = new ChessMatch();
 
+
 		UI.printBoard(chessMatch.getPieces());
 
-		Piece piece = board.getPieceByBoardPosition(1, 1);
+		Piece piece = board.piece(1, 1);
 
 		System.out.println(piece);
 	}
